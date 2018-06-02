@@ -125,6 +125,46 @@
           }
         }
       }
+    },
+    "angular-identity-auth": {
+      "root": "projects/angular-identity-auth",
+      "sourceRoot": "projects/angular-identity-auth/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/angular-identity-auth/tsconfig.lib.json",
+            "project": "projects/angular-identity-auth/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/angular-identity-auth/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-identity-auth/src/test.ts",
+            "tsConfig": "projects/angular-identity-auth/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-identity-auth/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-identity-auth/tsconfig.lib.json",
+              "projects/angular-identity-auth/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-identity-auth-demo"

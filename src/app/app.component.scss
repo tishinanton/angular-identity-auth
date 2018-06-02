@@ -1,0 +1,35 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    max-height: 100vh;
+}
+
+mat-drawer-container {
+    flex: auto;
+    max-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+mat-toolbar {
+    margin-bottom: 10px;
+}
+
+mat-drawer-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-in-wrapper {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

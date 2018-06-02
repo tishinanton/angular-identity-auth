@@ -1,0 +1,8 @@
+{
+    "name": "angular-identity-auth",
+    "version": "0.0.1-alfa.1",
+    "peerDependencies": {
+        "@angular/common": "^6.0.0",
+        "@angular/core": "^6.0.0"
+    }
+}
